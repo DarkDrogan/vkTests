@@ -12,26 +12,26 @@ import java.nio.channels.Channels;
 import java.nio.channels.ReadableByteChannel;
 
 
-public class App {
+class App {
     private static final String DIRECTORY = System.getProperty("user.home");
     private static final String APP_ID = "5025862";
     private static final String PERMISSIONS = "photos";
-    private static final String REDIRECT_URI = "https://oauth.vk.com/blank.html";
+    private static final String REDIR_URI = "https://oauth.vk.com/blank.html";
     private static final String DISPLAY = "page";
     private static final String API_VERSION = "5.35";
     private static final String USER_AGENT = "Mozilla/5.0";
-    private static final String TOKEN = "6ab63644dc9873ac464a082d72669bbfb278b0a59e727bdb18860bdbe3ee1dac59cb9567180a224d204a0";
+    private static final String TOKEN =
+            "6ab63644dc9873ac464a082d72669bbfb278b0a59e727bdb18860bdbe3ee1dac59cb9567180a224d204a0";
 
-    public static void main(String[] args) throws Exception {
-        URL website = new URL("https://oauth.vk.com/authorize?" +
-                "client_id=" + APP_ID +
-                "&scope=" + PERMISSIONS +
-                "&redirect_uri=" + REDIRECT_URI +
-                "&display=" + DISPLAY +
-                "&v=" + API_VERSION +
-                "&response_type=token");
+    public static void main(final String[] args) throws Exception {
+    URL website = new URL("https://oauth.vk.com/authorize?"
+                + "client_id=" + APP_ID
+                + "&scope=" + PERMISSIONS
+                + "&redirect_uri=" + REDIR_URI
+                + "&display=" + DISPLAY
+                + "&v=" + API_VERSION
+                + "&response_type=token");
         System.out.println(website.toURI().toString());
-
 //        URL website = new URL("https://api.vk.com/method/audio.get?count=1203&access_token=" + TOKEN);
 
         FileReader reader = new FileReader(getPhotos());
@@ -44,28 +44,27 @@ public class App {
                 URL downloadPhoto;
                 JSONObject innerObj = (JSONObject) array.get(i);
                 String name = innerObj.get("post_id").toString();
-                if (innerObj.get("src_xxxbig") != null){
+                if (innerObj.get("src_xxxbig") != null) {
                     downloadPhoto = new URL(innerObj.get("src_xxxbig").toString());
                     downloadPhoto(downloadPhoto, name);
-
                 }
                 else if (innerObj.get("src_xxbig") != null) {
                     downloadPhoto = new URL(innerObj.get("src_xxbig").toString());
                     downloadPhoto(downloadPhoto, name);
                 }
-                else if (innerObj.get("src_xbig") != null){
+                else if (innerObj.get("src_xbig") != null) {
                     downloadPhoto = new URL(innerObj.get("src_xbig").toString());
                     downloadPhoto(downloadPhoto, name);
                 }
-                else if(innerObj.get("src_big") != null){
+                else if(innerObj.get("src_big") != null) {
                     downloadPhoto = new URL(innerObj.get("src_big").toString());
                     downloadPhoto(downloadPhoto, name);
                 }
-                else if (innerObj.get("src") != null){
+                else if (innerObj.get("src") != null) {
                     downloadPhoto = new URL(innerObj.get("src").toString());
                     downloadPhoto(downloadPhoto, name);
                 }
-                else if(innerObj.get("src_small") != null){
+                else if(innerObj.get("src_small") != null) {
                     downloadPhoto = new URL(innerObj.get("src_small").toString());
                     downloadPhoto(downloadPhoto, name);
                 }
@@ -107,7 +106,7 @@ public class App {
         return result;
     }
 
-    private static void downloadPhoto(URL down, String pName){
+    private static void downloadPhoto(final URL down,final String pName){
         try {
             File photo = new File(DIRECTORY + "/vk/photos/" + pName);
             ReadableByteChannel rbc = Channels.newChannel(down.openStream());
