@@ -13,6 +13,7 @@ import java.nio.channels.ReadableByteChannel;
 
 
 public class App {
+    private static final String DIRECTORY = System.getProperty("user.home");
     private static final String APP_ID = "5025862";
     private static final String PERMISSIONS = "photos";
     private static final String REDIRECT_URI = "https://oauth.vk.com/blank.html";
@@ -46,32 +47,27 @@ public class App {
                 if (innerObj.get("src_xxxbig") != null){
                     downloadPhoto = new URL(innerObj.get("src_xxxbig").toString());
                     downloadPhoto(downloadPhoto, name);
-                    continue;
+
                 }
                 else if (innerObj.get("src_xxbig") != null) {
                     downloadPhoto = new URL(innerObj.get("src_xxbig").toString());
                     downloadPhoto(downloadPhoto, name);
-                    continue;
                 }
                 else if (innerObj.get("src_xbig") != null){
                     downloadPhoto = new URL(innerObj.get("src_xbig").toString());
                     downloadPhoto(downloadPhoto, name);
-                    continue;
                 }
                 else if(innerObj.get("src_big") != null){
                     downloadPhoto = new URL(innerObj.get("src_big").toString());
                     downloadPhoto(downloadPhoto, name);
-                    continue;
                 }
                 else if (innerObj.get("src") != null){
                     downloadPhoto = new URL(innerObj.get("src").toString());
                     downloadPhoto(downloadPhoto, name);
-                    continue;
                 }
                 else if(innerObj.get("src_small") != null){
                     downloadPhoto = new URL(innerObj.get("src_small").toString());
                     downloadPhoto(downloadPhoto, name);
-                    continue;
                 }
             }
         }catch (IOException e){
@@ -113,7 +109,7 @@ public class App {
 
     private static void downloadPhoto(URL down, String pName){
         try {
-            File photo = new File("/home/mavdeev/vk/photos/" + pName);
+            File photo = new File(DIRECTORY + "/vk/photos/" + pName);
             ReadableByteChannel rbc = Channels.newChannel(down.openStream());
             FileOutputStream fos = new FileOutputStream(photo);
             fos.getChannel().transferFrom(rbc, 0, Long.MAX_VALUE);
