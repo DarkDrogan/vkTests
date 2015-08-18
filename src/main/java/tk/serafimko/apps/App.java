@@ -29,10 +29,9 @@ class App {
 //        getPhotos();
         ArrayList<Integer> aids = parseAlbums(getAlbums());
 
-        for (int i = 0; i < 5; i++) {
+        for (int i = 1; i < aids.size(); i++) {
             Integer e = aids.get(i);
-            String filename;
-            filename = getJsonPhoto(e);
+            String filename  = getJsonPhoto(e);
             parseJsonPhoto(filename, e);
 
         }
@@ -52,13 +51,12 @@ class App {
         String filename = "";
 
         try {
-            URL urlPhoto = new URL("https://api.vk.com/method/photos.get?owner_id=1943145&album_id=" + pID + "&access_token=" + TOKEN);
+            URL urlPhoto = new URL("https://api.vk.com/method/photos.get?owner_id=1943145&album_id=" + pID);
+            System.out.println(urlPhoto);
             HttpURLConnection con = (HttpURLConnection) urlPhoto.openConnection();
 
             con.setRequestMethod("GET");
             con.addRequestProperty("User-Agent", USER_AGENT);
-
-            System.out.println(urlPhoto);
 
             int responseCode = con.getResponseCode();
 
@@ -70,8 +68,15 @@ class App {
                 }
             }
 
-            filename = downloadPhoto(urlPhoto, result.getName());
+            filename = result.getName();
+            ReadableByteChannel rbc = Channels.newChannel(urlPhoto.openStream());
+            FileOutputStream fos = new FileOutputStream(result);
+            fos.getChannel().transferFrom(rbc, 0, Long.MAX_VALUE);
+            fos.close();
+            Thread.sleep(5000);
 
+        }catch (InterruptedException e){
+            e.printStackTrace();
         }catch (IOException e){
             e.printStackTrace();
         }
@@ -99,6 +104,7 @@ class App {
             for (int j = 1; j < array.size(); j++) {
                 URL downloadPhoto;
                 JSONObject innerObj = (JSONObject) array.get(j);
+
                 String name = workdir + "/" + innerObj.get("pid").toString();
                 if (innerObj.get("src_xxxbig") != null) {
                     downloadPhoto = new URL(innerObj.get("src_xxxbig").toString());
@@ -124,33 +130,34 @@ class App {
         } catch (IOException e) {
             e.printStackTrace();
         } catch (ParseException e) {
-            e.printStackTrace();
+            System.out.println("Album id empty");
         }
 
 
     }
 
-    private static String downloadPhoto(final URL down,final String pName){
+    private static String downloadPhoto(final URL pDown, String pName){
         File photo = new File(pName);
         try {
+
+            URL down = pDown;
             ReadableByteChannel rbc = Channels.newChannel(down.openStream());
             FileOutputStream fos = new FileOutputStream(photo);
             fos.getChannel().transferFrom(rbc, 0, Long.MAX_VALUE);
             fos.close();
-            Thread.sleep(5000);
+            Thread.sleep(500);
         }catch (InterruptedException e){
             e.printStackTrace();
         }catch (IOException e){
             e.printStackTrace();
         }
-        System.out.println(photo.getName());
         return photo.getName();
     }
 
     private static File getAlbums(){
         File albums = null;
         try {
-            URL albumsURL = new URL("https://api.vk.com/method/photos.getAlbums?owner_id=1943145&access_token=" + TOKEN);
+            URL albumsURL = new URL("https://api.vk.com/method/photos.getAlbums?owner_id=1943145");
             HttpURLConnection getAlbums = (HttpURLConnection) albumsURL.openConnection();
             getAlbums.setRequestMethod("GET");
             getAlbums.addRequestProperty("User-Agent", USER_AGENT);
@@ -203,7 +210,6 @@ class App {
         return aids;
     }
 
-
     /**
      * Root directory for files.
      */
@@ -236,6 +242,5 @@ class App {
      * Token for requests.
      */
     private static final String TOKEN =
-            "b16aa4977f713d743276bd0458e65b31128b086ca9c318c73bb17f4b526316a95701bdcb08c40369d1523";
-
+            "a027bff76bdbce1bdfecfb3a741e67c481971adb119ac5117bc2804a9b16c0e9f67539d2215abbca0ba93";
 }
