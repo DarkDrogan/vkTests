@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2727db88-afd1-41d8-8c50-9fe97691971e" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__edu_stanford_ejalbert_BrowserLauncher2_1_3.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tk/serafimko/apps/MusicDownloader.java" afterPath="$PROJECT_DIR$/src/main/java/tk/serafimko/apps/MusicDownloader.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vkmus.iml" afterPath="$PROJECT_DIR$/vkmus.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="f6e4107e-dad4-4a09-9275-db33cd26f3df" name="init" comment="init" />
@@ -36,29 +39,28 @@
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+              <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="App.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="App.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/tk/serafimko/apps/App.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
+            <state vertical-scroll-proportion="3.87251">
               <caret line="173" column="0" selection-start-line="173" selection-start-column="0" selection-end-line="177" selection-end-column="59" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MusicDownloader.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MusicDownloader.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/tk/serafimko/apps/MusicDownloader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.21686748">
-              <caret line="71" column="13" selection-start-line="71" selection-start-column="13" selection-end-line="71" selection-end-column="13" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
               <folding>
-                <element signature="imports" expanded="true" />
                 <element signature="docComment;class#MusicDownloader#0" expanded="false" />
                 <element signature="docComment;field#DIRECTORY#0;class#MusicDownloader#0" expanded="false" />
                 <element signature="docComment;field#APP_ID#0;class#MusicDownloader#0" expanded="false" />
@@ -68,7 +70,47 @@
                 <element signature="docComment;field#API_VERSION#0;class#MusicDownloader#0" expanded="false" />
                 <element signature="docComment;field#USER_AGENT#0;class#MusicDownloader#0" expanded="false" />
                 <element signature="docComment;field#TOKEN#0;class#MusicDownloader#0" expanded="false" />
+                <element signature="method#main#0;class#MusicDownloader#0" expanded="false" />
+                <element signature="docComment;method#getAudioJson#0;class#MusicDownloader#0" expanded="false" />
+                <element signature="method#getAudioJson#0;class#MusicDownloader#0" expanded="false" />
+                <element signature="docComment;method#parseAudios#0;class#MusicDownloader#0" expanded="false" />
+                <element signature="method#parseAudios#0;class#MusicDownloader#0" expanded="false" />
+                <element signature="docComment;method#downloadAudio#0;class#MusicDownloader#0" expanded="false" />
+                <element signature="method#downloadAudio#0;class#MusicDownloader#0" expanded="false" />
+                <element signature="docComment;method#testNames#0;class#MusicDownloader#0" expanded="false" />
+                <element signature="method#testNames#0;class#MusicDownloader#0" expanded="false" />
+                <element signature="method#removeAudio#0;class#MusicDownloader#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/tk/serafimko/apps/test.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="vkmus.iml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vkmus.iml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="17" column="9" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -94,8 +136,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/tk/serafimko/apps/App.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/tk/serafimko/apps/test.java" />
         <option value="$PROJECT_DIR$/src/main/java/tk/serafimko/apps/MusicDownloader.java" />
       </list>
     </option>
@@ -121,9 +164,9 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="1280" />
-    <option name="y" value="30" />
+    <option name="y" value="148" />
     <option name="width" value="1440" />
-    <option name="height" value="874" />
+    <option name="height" value="876" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -149,8 +192,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -211,6 +252,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -502,9 +545,25 @@
       <envs />
       <method />
     </configuration>
-    <list size="2">
+    <configuration default="false" name="test" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" value="tk.serafimko.apps.test" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" value="" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="vkmus" />
+      <envs />
+      <method />
+    </configuration>
+    <list size="3">
       <item index="0" class="java.lang.String" itemvalue="Application.test - VK" />
       <item index="1" class="java.lang.String" itemvalue="Application.test - audio" />
+      <item index="2" class="java.lang.String" itemvalue="Application.test" />
     </list>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
@@ -522,7 +581,10 @@
       <workItem from="1439372490128" duration="18763000" />
       <workItem from="1439392640079" duration="3328000" />
       <workItem from="1439893289114" duration="3810000" />
-      <workItem from="1439897102405" duration="4598000" />
+      <workItem from="1439897102405" duration="9006000" />
+      <workItem from="1441273769009" duration="48000" />
+      <workItem from="1441365086131" duration="68000" />
+      <workItem from="1441365206079" duration="13338000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1439104242164</created>
@@ -542,28 +604,34 @@
       <option name="project" value="LOCAL" />
       <updated>1439900124646</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="music downloader">
+      <created>1439902312112</created>
+      <option name="number" value="00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1439902312112</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31447000" />
+    <option name="totallyTimeSpent" value="49309000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1280" y="30" width="1440" height="874" extended-state="4" />
+    <frame x="1280" y="148" width="1440" height="876" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32903227" sideWeight="0.49720672" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3277849" sideWeight="0.49720672" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32903227" sideWeight="0.5027933" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="true" weight="0.32954547" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" x="707" y="30" width="573" height="994" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.32954547" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" x="16" y="328" width="1264" height="397" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24930167" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24583334" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -594,7 +662,8 @@
     <MESSAGE value="test" />
     <MESSAGE value="checkstyle" />
     <MESSAGE value="it is alive&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="it is alive&#10;" />
+    <MESSAGE value="music downloader" />
+    <option name="LAST_COMMIT_MESSAGE" value="music downloader" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -611,6 +680,162 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tk/serafimko/apps/App.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="173" column="0" selection-start-line="173" selection-start-column="0" selection-end-line="177" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tk/serafimko/apps/MusicDownloader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="123" column="53" selection-start-line="123" selection-start-column="53" selection-end-line="123" selection-end-column="53" />
+          <folding>
+            <element signature="docComment;class#MusicDownloader#0" expanded="false" />
+            <element signature="docComment;field#DIRECTORY#0;class#MusicDownloader#0" expanded="false" />
+            <element signature="docComment;field#APP_ID#0;class#MusicDownloader#0" expanded="false" />
+            <element signature="docComment;field#PERMISSIONS#0;class#MusicDownloader#0" expanded="false" />
+            <element signature="docComment;field#REDIR_URI#0;class#MusicDownloader#0" expanded="false" />
+            <element signature="docComment;field#DISPLAY#0;class#MusicDownloader#0" expanded="false" />
+            <element signature="docComment;field#API_VERSION#0;class#MusicDownloader#0" expanded="false" />
+            <element signature="docComment;field#USER_AGENT#0;class#MusicDownloader#0" expanded="false" />
+            <element signature="docComment;field#TOKEN#0;class#MusicDownloader#0" expanded="false" />
+            <element signature="method#main#0;class#MusicDownloader#0" expanded="false" />
+            <element signature="docComment;method#getAudioJson#0;class#MusicDownloader#0" expanded="false" />
+            <element signature="method#getAudioJson#0;class#MusicDownloader#0" expanded="false" />
+            <element signature="docComment;method#parseAudios#0;class#MusicDownloader#0" expanded="false" />
+            <element signature="method#parseAudios#0;class#MusicDownloader#0" expanded="false" />
+            <element signature="docComment;method#downloadAudio#0;class#MusicDownloader#0" expanded="false" />
+            <element signature="method#downloadAudio#0;class#MusicDownloader#0" expanded="false" />
+            <element signature="docComment;method#testNames#0;class#MusicDownloader#0" expanded="false" />
+            <element signature="method#testNames#0;class#MusicDownloader#0" expanded="false" />
+            <element signature="method#removeAudio#0;class#MusicDownloader#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vkmus.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="9" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tk/serafimko/apps/App.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="173" column="0" selection-start-line="173" selection-start-column="0" selection-end-line="177" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tk/serafimko/apps/MusicDownloader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="docComment;class#MusicDownloader#0" expanded="false" />
+            <element signature="docComment;field#DIRECTORY#0;class#MusicDownloader#0" expanded="false" />
+            <element signature="docComment;field#APP_ID#0;class#MusicDownloader#0" expanded="false" />
+            <element signature="docComment;field#PERMISSIONS#0;class#MusicDownloader#0" expanded="false" />
+            <element signature="docComment;field#REDIR_URI#0;class#MusicDownloader#0" expanded="false" />
+            <element signature="docComment;field#DISPLAY#0;class#MusicDownloader#0" expanded="false" />
+            <element signature="docComment;field#API_VERSION#0;class#MusicDownloader#0" expanded="false" />
+            <element signature="docComment;field#USER_AGENT#0;class#MusicDownloader#0" expanded="false" />
+            <element signature="docComment;field#TOKEN#0;class#MusicDownloader#0" expanded="false" />
+            <element signature="method#main#0;class#MusicDownloader#0" expanded="false" />
+            <element signature="docComment;method#getAudioJson#0;class#MusicDownloader#0" expanded="false" />
+            <element signature="method#getAudioJson#0;class#MusicDownloader#0" expanded="false" />
+            <element signature="docComment;method#parseAudios#0;class#MusicDownloader#0" expanded="false" />
+            <element signature="method#parseAudios#0;class#MusicDownloader#0" expanded="false" />
+            <element signature="docComment;method#downloadAudio#0;class#MusicDownloader#0" expanded="false" />
+            <element signature="method#downloadAudio#0;class#MusicDownloader#0" expanded="false" />
+            <element signature="docComment;method#testNames#0;class#MusicDownloader#0" expanded="false" />
+            <element signature="method#testNames#0;class#MusicDownloader#0" expanded="false" />
+            <element signature="method#removeAudio#0;class#MusicDownloader#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vkmus.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="9" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tk/serafimko/apps/App.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="173" column="0" selection-start-line="173" selection-start-column="0" selection-end-line="177" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tk/serafimko/apps/MusicDownloader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="112" column="43" selection-start-line="112" selection-start-column="43" selection-end-line="112" selection-end-column="43" />
+          <folding>
+            <element signature="docComment;class#MusicDownloader#0" expanded="false" />
+            <element signature="docComment;field#DIRECTORY#0;class#MusicDownloader#0" expanded="false" />
+            <element signature="docComment;field#APP_ID#0;class#MusicDownloader#0" expanded="false" />
+            <element signature="docComment;field#PERMISSIONS#0;class#MusicDownloader#0" expanded="false" />
+            <element signature="docComment;field#REDIR_URI#0;class#MusicDownloader#0" expanded="false" />
+            <element signature="docComment;field#DISPLAY#0;class#MusicDownloader#0" expanded="false" />
+            <element signature="docComment;field#API_VERSION#0;class#MusicDownloader#0" expanded="false" />
+            <element signature="docComment;field#USER_AGENT#0;class#MusicDownloader#0" expanded="false" />
+            <element signature="docComment;field#TOKEN#0;class#MusicDownloader#0" expanded="false" />
+            <element signature="method#main#0;class#MusicDownloader#0" expanded="false" />
+            <element signature="docComment;method#getAudioJson#0;class#MusicDownloader#0" expanded="false" />
+            <element signature="method#getAudioJson#0;class#MusicDownloader#0" expanded="false" />
+            <element signature="docComment;method#parseAudios#0;class#MusicDownloader#0" expanded="false" />
+            <element signature="method#parseAudios#0;class#MusicDownloader#0" expanded="false" />
+            <element signature="docComment;method#downloadAudio#0;class#MusicDownloader#0" expanded="false" />
+            <element signature="method#downloadAudio#0;class#MusicDownloader#0" expanded="false" />
+            <element signature="docComment;method#testNames#0;class#MusicDownloader#0" expanded="false" />
+            <element signature="method#testNames#0;class#MusicDownloader#0" expanded="false" />
+            <element signature="method#removeAudio#0;class#MusicDownloader#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vkmus.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="9" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -683,44 +908,57 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.m2/repository/com/googlecode/json-simple/json-simple/1.1.1/json-simple-1.1.1.jar!/org/json/simple/parser/Yylex.class">
+    <entry file="jar://$MAVEN_REPOSITORY$/com/googlecode/json-simple/json-simple/1.1.1/json-simple-1.1.1.jar!/org/json/simple/parser/Yylex.class">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="28.296297">
           <caret line="127" column="4" selection-start-line="127" selection-start-column="4" selection-end-line="127" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/.m2/repository/com/googlecode/json-simple/json-simple/1.1.1/json-simple-1.1.1.jar!/org/json/simple/parser/JSONParser.class">
+    <entry file="jar://$MAVEN_REPOSITORY$/com/googlecode/json-simple/json-simple/1.1.1/json-simple-1.1.1.jar!/org/json/simple/parser/JSONParser.class">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-4.037037">
           <caret line="77" column="0" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vkmus.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="9" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tk/serafimko/apps/App.java">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="173" column="0" selection-start-line="173" selection-start-column="0" selection-end-line="177" selection-end-column="59" />
+          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tk/serafimko/apps/test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/tk/serafimko/apps/MusicDownloader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.21686748">
-          <caret line="71" column="13" selection-start-line="71" selection-start-column="13" selection-end-line="71" selection-end-column="13" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="docComment;class#MusicDownloader#0" expanded="false" />
             <element signature="docComment;field#DIRECTORY#0;class#MusicDownloader#0" expanded="false" />
             <element signature="docComment;field#APP_ID#0;class#MusicDownloader#0" expanded="false" />
@@ -730,7 +968,25 @@
             <element signature="docComment;field#API_VERSION#0;class#MusicDownloader#0" expanded="false" />
             <element signature="docComment;field#USER_AGENT#0;class#MusicDownloader#0" expanded="false" />
             <element signature="docComment;field#TOKEN#0;class#MusicDownloader#0" expanded="false" />
+            <element signature="method#main#0;class#MusicDownloader#0" expanded="false" />
+            <element signature="docComment;method#getAudioJson#0;class#MusicDownloader#0" expanded="false" />
+            <element signature="method#getAudioJson#0;class#MusicDownloader#0" expanded="false" />
+            <element signature="docComment;method#parseAudios#0;class#MusicDownloader#0" expanded="false" />
+            <element signature="method#parseAudios#0;class#MusicDownloader#0" expanded="false" />
+            <element signature="docComment;method#downloadAudio#0;class#MusicDownloader#0" expanded="false" />
+            <element signature="method#downloadAudio#0;class#MusicDownloader#0" expanded="false" />
+            <element signature="docComment;method#testNames#0;class#MusicDownloader#0" expanded="false" />
+            <element signature="method#testNames#0;class#MusicDownloader#0" expanded="false" />
+            <element signature="method#removeAudio#0;class#MusicDownloader#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tk/serafimko/apps/App.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="3.87251">
+          <caret line="173" column="0" selection-start-line="173" selection-start-column="0" selection-end-line="177" selection-end-column="59" />
+          <folding />
         </state>
       </provider>
     </entry>
