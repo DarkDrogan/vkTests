@@ -57,11 +57,11 @@ public class MusicDownloader {
                 + "&display=" + DISPLAY
                 + "&v=" + API_VERSION
                 + "&response_type=token");
-        System.out.println(website.toURI().toString());
-//        parseAudios(getAudioJson());
-        removeAudio(getAudioJson());
-    }
+//        System.out.println(website.toURI().toString());
 
+        parseAudios(getAudioJson(),100);
+//        removeAudio(getAudioJson());
+    }
     /**
      * Запрос к VKapi audio.get(owner_id,TOKEN).
      * @return audio.json
@@ -100,13 +100,13 @@ public class MusicDownloader {
         }
         return audios;
     }
-
     /**
      * Парсер исполнителя и названия трека.
      * @param pAudios файл со списком аудиозаписей.
      */
-    private static void parseAudios(File pAudios){
+    private static void parseAudios(File pAudios, int pCount){
         File audios = pAudios;
+
 
         try {
             FileReader reader = new FileReader(audios);
@@ -114,21 +114,23 @@ public class MusicDownloader {
             JSONObject object = (JSONObject) parser.parse(reader);
 //            Все записи содержатся в разделе response. Из него и получаем массив треков.
             JSONArray array = (JSONArray) object.get("response");
-
-            for (int i = 1; i < array.size(); i++) {
+//            С первого, а не нулевого, потому что первый элемент - не трек
+            for (int i = 1; i < pCount; i++) {
                 JSONObject record = (JSONObject) array.get(i);
                 String artist = record.get("artist").toString();
                 String title = record.get("title").toString();
 
 //                Вызов метода для проверки валидности имени
-                String names[] = testNames(artist,title);
+                artist = correctString(artist);
+                title = correctString(title);
+
 //
 //                System.out.println(artist + " " + title);
 //                System.out.println(record.get("url"));
 
                 URL audioFileURL = new URL(record.get("url").toString());
-                System.out.println(DIRECTORY + "/vk/music/" + names[0] + "_" + names[1] + ".mp3");
-                File audioFile = new File(DIRECTORY + "/vk/music/" + names[0] + "_" + names[1] + ".mp3");
+                System.out.println(DIRECTORY + "/vk/music/" + artist + "_" + title + ".mp3");
+                File audioFile = new File(DIRECTORY + "/vk/music/" + artist + "_" + title + ".mp3");
                 if (!audioFile.exists()) audioFile.createNewFile();
                 else {
                     System.out.println("File exists!");
@@ -145,7 +147,6 @@ public class MusicDownloader {
         }
 
     }
-
     /**
      * Метод для скачивания трека.
      * @param pUrl Ссылка на трек.
@@ -165,52 +166,32 @@ public class MusicDownloader {
 
     /**
      * Разнообразные тесты исполнителя и названия трека.
-     * @param pArtist Исполнитель
-     * @param pTitle Название
-     * @return Массив [artist,title]
+     * @param input Исполнитель или название трека
+     * @return проверенную строку.
      */
-    private static String[] testNames(String pArtist, String pTitle){
-        String newArtist = pArtist;
-        String newTitle = pTitle;
-        String names[] = new String[2];
+    private static String correctString(String input){
+        String output = input;
 
-        if (newArtist.contains("&gt;")) {
-            newArtist = newArtist.replaceAll("&gt;", "_");
-            if (newArtist.contains("&lt;")) {
-                newArtist = newArtist.replaceAll("&lt;", "_");
+        if (output.contains("&gt;")) {
+            output = output.replaceAll("&gt;", "_");
+            if (output.contains("&lt;")) {
+                output = output.replaceAll("&lt;", "_");
             }
         }
-        if (newTitle.contains("&gt;")) {
-            newTitle = newTitle.replaceAll("&gt;", "_");
-            if (newTitle.contains("&lt;")) {
-                newTitle = newTitle.replaceAll("&lt;", "_");
-            }
-        }
-        if (newArtist.length() > 25){
-            newArtist = newArtist.substring(0, 25);
-        }
-        if (newTitle.length() > 25){
-            newTitle = newTitle.substring(0, 25);
-        }
-        if (newArtist.contains("&amp")){
-            newArtist = newArtist.replaceAll("&amp", "and");
+
+        if (output.length() > 25){
+            output = output.substring(0, 25);
         }
 
-        if (newTitle.contains("&amp")){
-            newTitle = newTitle.replaceAll("&amp", "and");
-        }
-        if (newArtist.contains("/")){
-            newArtist = newArtist.replaceAll("/", "-");
+        if (output.contains("&amp")){
+            output = output.replaceAll("&amp", "and");
         }
 
-        if (newTitle.contains("/")){
-            newTitle = newTitle.replaceAll("/", "-");
+        if (output.contains("/")){
+            output = output.replaceAll("/", "-");
         }
 
-        names[0] = newArtist;
-        names[1] = newTitle;
-
-        return names;
+        return output;
     }
 
     private static void removeAudio(File pAudios) throws URISyntaxException{

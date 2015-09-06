@@ -24,27 +24,28 @@ class App {
 //                + "&v=" + API_VERSION
 //                + "&response_type=token");
 //        System.out.println(website.toURI().toString());
-//        getAlbums();
-//        URL website = new URL("https://api.vk.com/method/audio.get?count=1203&access_token=" + TOKEN);
-//        getPhotos();
+//        System.exit(0);
+        getAlbums();
+        URL website = new URL("https://api.vk.com/method/audio.get?count=1203&access_token=" + TOKEN);
+
         ArrayList<Integer> aids = parseAlbums(getAlbums());
 
         for (int i = 1; i < aids.size(); i++) {
             Integer e = aids.get(i);
-            String filename  = getJsonPhoto(e);
+            String filename = getJsonPhoto(e);
             parseJsonPhoto(filename, e);
 
         }
-    }
-    //        for (Integer e : aids){
+//
+//        for (Integer e : aids) {
 //            getPhotos(e);
 //            String filename = DIRECTORY + "/vk/photos/" + e.toString() + ".json";
 //            String dir = e.toString();
-//            parsePhotos(filename,dir);
+//            parsePhotos(filename, dir);
 //        }
-//        }
-//    }
-//
+    }
+
+
     private static String getJsonPhoto(Integer pID) {
 
         File result = null;
@@ -101,7 +102,7 @@ class App {
             JSONParser parser = new JSONParser();
             JSONObject object = (JSONObject) parser.parse(reader);
             JSONArray array = (JSONArray) object.get("response");
-            for (int j = 1; j < array.size(); j++) {
+            for (int j = 0; j < array.size(); j++) {
                 URL downloadPhoto;
                 JSONObject innerObj = (JSONObject) array.get(j);
 
@@ -137,7 +138,7 @@ class App {
     }
 
     private static String downloadPhoto(final URL pDown, String pName){
-        File photo = new File(pName);
+        File photo = new File(pName + ".jpg");
         try {
 
             URL down = pDown;
@@ -242,5 +243,5 @@ class App {
      * Token for requests.
      */
     private static final String TOKEN =
-            "a027bff76bdbce1bdfecfb3a741e67c481971adb119ac5117bc2804a9b16c0e9f67539d2215abbca0ba93";
+            "e52e64e53a0a88c081042d2599b53edf986680616bf39ae835606013a1a3c2589281fe656aa4680bc83be";
 }
